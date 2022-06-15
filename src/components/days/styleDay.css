@@ -1,0 +1,87 @@
+.day {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.day_title {
+    font-weight: bold;
+    font-size: 20px;
+    gap: 25px
+}
+
+.day-list {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.hour_list {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 72%;
+    gap: 3px;
+}
+
+.hour-list {
+    margin-top: 25px;
+    width: 100%;
+}
+
+
+.hour-list__item {
+    text-align: center;
+    width: 15%;
+    border: white 1px solid;
+}
+
+.hour-list__item p {
+    margin: 0;
+}
+
+.corner-day {
+    border: 1px white solid;
+    padding: 0 10px 10px 10px;
+}
+
+.corner-day:hover {
+    box-shadow: 2px 2px black;
+}
+
+.main-day {
+    border: 3px white solid;
+    padding: 0 20px;
+}
+
+.hour_list::-webkit-scrollbar {
+    height: 10px;
+}
+
+.hour_list::-webkit-scrollbar-track {
+    background: transparent; /* color of the tracking area */
+}
+
+.hour_list::-webkit-scrollbar-thumb {
+    background-color: #497ce3; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+@media (max-width: 624px) {
+    .day-list {
+        flex-direction: column;
+    }
+
+    .hour-list__item {
+        width: 30%;
+    }
+
+    .hour_list {
+        width: 95%;
+    }
+}
